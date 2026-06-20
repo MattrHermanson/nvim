@@ -1,0 +1,30 @@
+require("plugins.mason")
+require("plugins.treesitter")
+require("plugins.lspconfig")
+require("plugins.mason-lspconfig")
+require("plugins.plenary")
+require("plugins.telescope")
+require("plugins.mini-pairs")
+require("plugins.vague")
+require("plugins.ts-comments")
+require("plugins.lazydev")
+require("plugins.flash")
+require("plugins.which-key")
+require("plugins.mini-icons")
+require("plugins.gitsigns")
+require("plugins.todo-comments")
+require("plugins.mini-animate")
+require("plugins.snacks")
+require("plugins.nui")
+require("plugins.neo-tree")
+require("plugins.noice")
+require("plugins.blink")
+require("plugins.lualine")
+require("plugins.harpoon")
+require("plugins.lint")
+require("plugins.persistence")
+
+-- TODO:
+-- 2. configure dashboard w/ opening message
+-- 4. keybinds - clean up exisiting keybinds too
+-- 4. snacks & mini plugins
