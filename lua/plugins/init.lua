@@ -23,8 +23,3 @@ require("plugins.lualine")
 require("plugins.harpoon")
 require("plugins.lint")
 require("plugins.persistence")
-
--- TODO:
--- 2. configure dashboard w/ opening message
--- 4. keybinds - clean up exisiting keybinds too
--- 4. snacks & mini plugins
