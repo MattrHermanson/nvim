@@ -1,12 +1,10 @@
 -- Clear search highlights on pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR><Esc>", { desc = "Clear search highlight" })
 
-local opts = { remap = true, silent = true }
-
-vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
-vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
-vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
-vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
+vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>", { silent = true })
+vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>", { silent = true })
+vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>", { silent = true })
+vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>", { silent = true })
 
 -- Move windows around the layout
 vim.keymap.set("n", "<leader>mH", "<C-w>H", { desc = "Move window to far left" })
