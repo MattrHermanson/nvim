@@ -1,7 +1,7 @@
 -- Clear search highlights on pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR><Esc>", { desc = "Clear search highlight" })
 
-local opts = { noremap = true, silent = true }
+local opts = { remap = true, silent = true }
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
 vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
