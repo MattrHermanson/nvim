@@ -32,7 +32,7 @@ vim.keymap.set("n", "<leader>fh", function()
 	toggle_telescope(harpoon:list())
 end, { desc = "Open Harpoon window" })
 
-vim.keymap.set("n", "<leader>hm", function()
+vim.keymap.set("n", "<leader>hh", function()
 	harpoon.ui:toggle_quick_menu(harpoon:list())
 end, { desc = "Open Harpoon Buffer" })
 
@@ -40,29 +40,3 @@ end, { desc = "Open Harpoon Buffer" })
 vim.keymap.set("n", "<leader>a", function()
 	harpoon:list():add()
 end, { desc = "Add to Harpoon" })
-
--- You can add descriptions to these as well, though which-key won't show them
--- in the main <leader> menu since they don't start with <leader>
-vim.keymap.set("n", "<leader>hh", function()
-	harpoon:list():select(1)
-end, { desc = "Harpoon buffer 1" })
-
-vim.keymap.set("n", "<leader>hj", function()
-	harpoon:list():select(2)
-end, { desc = "Harpoon buffer 2" })
-
-vim.keymap.set("n", "<leader>hk", function()
-	harpoon:list():select(3)
-end, { desc = "Harpoon buffer 3" })
-
-vim.keymap.set("n", "<leader>hl", function()
-	harpoon:list():select(4)
-end, { desc = "Harpoon buffer 4" })
-
-vim.keymap.set("n", "<C-S-P>", function()
-	harpoon:list():prev()
-end, { desc = "Harpoon prev buffer" })
-
-vim.keymap.set("n", "<C-S-N>", function()
-	harpoon:list():next()
-end, { desc = "Harpoon next buffer" })
