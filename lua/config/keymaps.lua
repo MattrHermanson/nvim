@@ -25,3 +25,7 @@ vim.keymap.set("n", "<C-,>", ":vertical resize -5<CR>", { silent = true, desc = 
 vim.keymap.set("n", "<C-.>", ":vertical resize +5<CR>", { silent = true, desc = "Grow window width" })
 
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+-- Keep selection when changing indent
+vim.keymap.set("x", ">", ">gv", { desc = "Indent right and reselect" })
+vim.keymap.set("x", "<", "<gv", { desc = "Indent left and reselect" })
