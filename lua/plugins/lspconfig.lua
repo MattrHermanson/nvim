@@ -108,5 +108,28 @@ vim.lsp.config("clangd", {
 	},
 })
 
+-- silence basedpyright baselined diagnostics
+local function strip(list)
+	return vim.tbl_filter(function(d)
+		return not (d.message or ""):find("^Baselined")
+	end, list)
+end
+
+vim.lsp.config("basedpyright", {
+	handlers = {
+		["textDocument/publishDiagnostics"] = function(err, result, ctx)
+			if result and result.diagnostics then
+				result.diagnostics = strip(result.diagnostics)
+			end
+			return vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx)
+		end,
+		["textDocument/diagnostic"] = function(err, result, ctx)
+			if result and result.items then
+				result.items = strip(result.items)
+			end
+			return vim.lsp.diagnostic.on_diagnostic(err, result, ctx)
+		end,
+	},
+})
 -- 2. Explicitly enable the server so it attaches to your buffers
 vim.lsp.enable("lua_ls")
