@@ -101,5 +101,12 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
+vim.lsp.config("clangd", {
+	cmd = {
+		"clangd",
+		"--query-driver=" .. (vim.env.CONDA_PREFIX or "") .. "/bin/*,/usr/bin/*",
+	},
+})
+
 -- 2. Explicitly enable the server so it attaches to your buffers
 vim.lsp.enable("lua_ls")
